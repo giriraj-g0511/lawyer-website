@@ -510,7 +510,9 @@ button {
 }
 
 .about__image {
-  aspect-ratio: 4/5;
+  aspect-ratio: 830/1024;
+  /* height: 1024;
+  width: 824; */
   background: linear-gradient(135deg, var(--color-navy-light) 0%, var(--color-dark-green) 100%);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -569,7 +571,7 @@ button {
 /* --- Practice Areas --- */
 .practice__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-xl);
 }
 
@@ -1122,4 +1124,38 @@ button {
     right: 0;
     bottom: -10px;
   }
+}
+
+/* WhatsApp CSS */
+.whatsapp-float {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.whatsapp-float img {
+  width: 28px;
+  height: 28px;
+  filter: invert(1);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+.whatsapp-float {
+  display: none;
+}
+
+body.loaded .whatsapp-float {
+  display: flex;
 }
